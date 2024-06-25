@@ -95,6 +95,20 @@ int extract_max(){
     return maxValue;
 }
 
+int removeHeap(int index) {
+    
+    int removedValue = mainArray[index];
+    if(index != 1){        
+        mainArray[index] = mainArray[lastPosition];
+        mainArray[lastPosition] = -1;
+        lastPosition -= 1;
+    }
+
+    sift_down(mainArray,index); 
+
+    return removedValue;   
+}
+
 int main() {
             
     printf("isEmpty?  %s", is_empty()? "true \n" : "false \n");
@@ -135,5 +149,10 @@ int main() {
     
     printf("the number of elements stored is equal to %d \n", get_size());
 
+    int removedValue = removeHeap(2);
+    printf("Removed value is equal to %d \n", removedValue);
 
+    for(int i = 1; i< arraySized -1; i++){
+        printf("Array position = %d and value = %d \n" ,i, mainArray[i]);
+    }  
 }
