@@ -71,11 +71,28 @@ void sift_down(int *array, int index){
     int rightChild = (index * 2) + 1;
     int grater  = array[leftChild] > array[rightChild] ? leftChild : rightChild;
 
-    if(array[index] > grater){
-        
-
+    if(array[grater] > array[index]){
+        int aux = array[grater];
+        array[grater] = array[index];
+        array[index] = aux;
+        sift_down(array,grater);
     }
 
+}
+
+int extract_max(){
+
+    if(lastPosition == 0){
+        printf("Array is null");
+        return -1;
+    }
+
+    int maxValue = mainArray[1];
+    mainArray[1] = mainArray[lastPosition];
+    mainArray[lastPosition] = -1;
+    lastPosition -= 1;
+    sift_down(mainArray, 1);
+    return maxValue;
 }
 
 int main() {
@@ -109,7 +126,14 @@ int main() {
     printf("the number of elements stored is equal to %d \n", get_size());
     printf("isEmpty?  %s", is_empty()? "true \n" : "false \n");
 
-
+    int maxValue = extract_max();
+    
+    printf("MaxValue = %d \n", maxValue);
+    for(int i = 1; i< arraySized -1; i++){
+        printf("Array position = %d and value = %d \n" ,i, mainArray[i]);
+    }  
+    
+    printf("the number of elements stored is equal to %d \n", get_size());
 
 
 }
