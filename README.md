@@ -804,7 +804,7 @@ if you can identify the runtime complexity of different algorithms. It's a super
     - [x] [CS 61B Lecture 24: Priority Queues (video)](https://archive.org/details/ucberkeley_webcast_yIUFT6AKBGE)
     - [x] [Linear Time BuildHeap (max-heap)](https://www.youtube.com/watch?v=MiyLo8adrWw)
     - [x] [[Review] Heap (playlist) in 13 minutes (video)](https://www.youtube.com/playlist?list=PL9xmBV_5YoZNsyqgPW-DNwUeT8F8uhWc6)
-    - [ ] Implement a max-heap:
+    - [x] Implement a max-heap:
         - [x] insert
         - [x] sift_up - needed for insert
         - [x] get_max - returns the max item, without removing it
@@ -813,8 +813,8 @@ if you can identify the runtime complexity of different algorithms. It's a super
         - [x] extract_max - returns the max item, removing it
         - [x] sift_down - needed for extract_max
         - [x] remove(x) - removes item at index x
-        - [ ] heapify - create a heap from an array of elements, needed for heap_sort
-        - [ ] heap_sort() - take an unsorted array and turn it into a sorted array in place using a max heap or min heap
+        - [x] heapify - create a heap from an array of elements, needed for heap_sort
+        - [x] heap_sort() - take an unsorted array and turn it into a sorted array in place using a max heap or min heap
 
 ## Sorting
 
