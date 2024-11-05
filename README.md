@@ -879,9 +879,9 @@ if you can identify the runtime complexity of different algorithms. It's a super
 
 - [ ] Implement:
     - [x] Mergesort: O(n log n) average and worst case
-    - [ ] Quicksort O(n log n) average case
+    - [X] Quicksort O(n log n) average case
     - Selection sort and insertion sort are both O(n^2) average and worst-case
-    - For heapsort, see Heap data structure above
+    - [x] For heapsort, see Heap data structure above
 
 - [ ] Not required, but I recommended them:
     - [ ] [Sedgewick - Radix Sorts (6 videos)](https://www.coursera.org/learn/algorithms-part2/home/week/3)
